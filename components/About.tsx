@@ -13,7 +13,7 @@ export default function About() {
         <div className="grid grid-cols-2 md:flex md:flex-row md:justify-between gap-8 md:gap-0 w-full my-6 md:my-10">
           <div className="flex justify-center">
             <Image 
-              src="Apple.svg"
+              src="/Apple.svg"
               height={250}
               width={200}
               alt="Apple platform"
@@ -22,7 +22,7 @@ export default function About() {
           </div>
           <div className="flex justify-center">
             <Image 
-              src="Spotify.svg"
+              src="/Spotify.svg"
               height={150}
               width={150}
               alt="Spotify platform"
@@ -31,7 +31,7 @@ export default function About() {
           </div>
           <div className="flex justify-center">
             <Image 
-              src="Youtube.svg"
+              src="/Youtube.svg"
               height={150}
               width={150}
               alt="Youtube platform"
@@ -40,7 +40,7 @@ export default function About() {
           </div>
           <div className="flex justify-center">
             <Image 
-              src="TikTok.svg"
+              src="/TikTok.svg"
               height={150}
               width={150}
               alt="TikTok platform"
@@ -54,7 +54,7 @@ export default function About() {
           {/* Left Image Section */}
           <div className="w-full md:w-1/2">
             <Image
-              src="AboutImage.svg"
+              src="/AboutImage.svg"
               alt="About us"
               height={100}
               width={100}
@@ -67,7 +67,7 @@ export default function About() {
           <div className="w-full md:w-[45%]">
             <div className="flex flex-col h-full justify-center">
               <Image
-                src="Abouttext.svg"
+                src="/Abouttext.svg"
                 alt="About text"
                 height={100}
                 width={100}

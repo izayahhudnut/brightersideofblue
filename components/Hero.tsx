@@ -62,7 +62,7 @@ export default function Hero() {
               Join us for exciting conversations about Police Rules terms and so much more. Our awesome guests are industry experts.
             </p>
             <Image
-              src="HeroSocial.svg"
+              src="/HeroSocial.svg"
               alt="social"
               height={100}
               width={100}
@@ -89,7 +89,7 @@ export default function Hero() {
       {/* Hero image */}
       <div className="w-full mt-4 md:mt-0">
         <Image
-          src="HeroImage.svg"
+          src="/HeroImage.svg"
           alt="image"
           height={100}
           width={100}
