@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from "react"
-import Image from "next/image"
 import Button from "./ui/Button"
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import { X } from 'lucide-react'
@@ -46,13 +45,10 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 md:gap-4">
           {/* Hero title image */}
           <div className="w-full md:w-auto">
-            <Image
+            <img
               src="HeroTitle.svg"
               alt="Text"
-              height="400"
-              width="600"
               className="w-full h-auto"
-              priority
             />
           </div>
 
@@ -61,11 +57,9 @@ export default function Hero() {
             <p className="text-base md:text-lg mb-4 text-white">
               Join us for exciting conversations about Police Rules terms and so much more. Our awesome guests are industry experts.
             </p>
-            <Image
+            <img
               src="/HeroSocial.svg"
               alt="social"
-              height={100}
-              width={100}
               className="w-20 md:w-auto h-auto"
             />
             <p className="mt-2 opacity-60 text-white text-sm md:text-base">
@@ -88,13 +82,10 @@ export default function Hero() {
 
       {/* Hero image */}
       <div className="w-full mt-4 md:mt-0">
-        <Image
+        <img
           src="/HeroImage.svg"
           alt="image"
-          height={100}
-          width={100}
           className="w-full h-auto"
-          priority
         />
       </div>
 
@@ -120,11 +111,11 @@ export default function Hero() {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center p-4 bg-[#2A2A32] rounded-lg hover:bg-[#33333C] transition-colors"
                 >
-                  <Image
+                  <img
                     src={platform.image}
                     alt={platform.name}
-                    width={50}
-                    height={50}
+                    width="50"
+                    height="50"
                     className="mb-2"
                   />
                   <span className="text-white">{platform.name}</span>
