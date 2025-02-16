@@ -67,7 +67,7 @@ export default function About() {
           <div className="w-full md:w-[45%]">
             <div className="flex flex-col h-full justify-center">
               <Image
-                src="/Abouttext.svg"
+                src="/AboutText.svg"
                 alt="About text"
                 height={100}
                 width={100}

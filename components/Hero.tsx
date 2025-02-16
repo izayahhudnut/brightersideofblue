@@ -28,7 +28,7 @@ export default function Hero() {
     },
     { 
       name: 'TikTok', 
-      image: '/miniaple.svg', 
+      image: '/miniapple.svg', 
       href: 'https://www.tiktok.com/@brightersideofblue' 
     },
     { 
