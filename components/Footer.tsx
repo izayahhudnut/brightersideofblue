@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 import {
   FaFacebook,
   FaInstagram,
-  FaLinkedin,
   FaYoutube,
 } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';

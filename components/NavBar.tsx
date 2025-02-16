@@ -43,9 +43,10 @@ export default function Navbar() {
     { href: pathname === '/partner' ? '/#contact' : '#contact', text: "Contact" },
   ]
 
-  const handleEpisodesClick = (e) => {
+  const handleEpisodesClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     setShowEpisodesPopup(true)
+    setIsMenuOpen(false) // Close mobile menu on click
   }
 
   return (
@@ -128,7 +129,7 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="pt-8">
-            <Link href="/partner">
+            <Link href="/partner" onClick={() => setIsMenuOpen(false)}>
               <Button text="Sponsor" />
             </Link>
           </div>

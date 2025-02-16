@@ -8,10 +8,8 @@ import { Button } from "@/components/ui/Chatbot"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import Image from "next/image"
-import ReactMarkdown from 'react-markdown'
-import rehypeRaw from 'rehype-raw'
-
-
+import ReactMarkdown from "react-markdown"
+import rehypeRaw from "rehype-raw"
 
 export default function ModernChatbot() {
   const { messages, input, handleInputChange, handleSubmit } = useChat()
@@ -32,12 +30,10 @@ export default function ModernChatbot() {
             <div className="flex justify-between items-center p-4 border-b bg-white">
               <div className="flex items-center space-x-2">
                 <Image 
-                    src="minilogo.svg"
-                    width="25"
-                    height="25"
-                    alt=""
-                
-                
+                  src="minilogo.svg"
+                  width="25"
+                  height="25"
+                  alt=""
                 />
                 <h3 className="font-semibold">Whats on your mind?</h3>
               </div>
@@ -56,7 +52,7 @@ export default function ModernChatbot() {
                     <ReactMarkdown
                       rehypePlugins={[rehypeRaw]}
                       components={{
-                        a: ({ node, ...props }) => <a className="font-bold underline" {...props} />
+                        a: (props) => <a className="font-bold underline" {...props} />,
                       }}
                     >
                       {m.content}
@@ -84,7 +80,7 @@ export default function ModernChatbot() {
       {!isOpen && (
         <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}>
           <Button onClick={toggleChat} className="rounded-full w-12 h-12 shadow-lg bg-blue-500">
-          <svg
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"

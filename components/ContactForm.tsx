@@ -21,7 +21,9 @@ const ContactForm = () => {
       <div className="w-full md:w-1/2 flex flex-col justify-between p-4 md:p-6">
         <div>
           <h2 className="text-2xl md:text-3xl font-bold mb-2">Get in Touch with Us</h2>
-          <p className="text-gray-400 mb-6">Got questions? We've got answers! Let's connect and bring your ideas to life.</p>
+          <p className="text-gray-400 mb-6">
+            Got questions? We&apos;ve got answers! Let&apos;s connect and bring your ideas to life.
+          </p>
         </div>
         <form className="space-y-4">
           <div>
