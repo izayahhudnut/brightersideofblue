@@ -18,22 +18,22 @@ export default function Hero() {
   const platformLinks = [
     { 
       name: 'Spotify', 
-      image: '/minispotify.svg', 
+      image: '/miniyoutube.svg', 
       href: 'https://open.spotify.com/show/5SapJxcx9ZM9s7D1zEgryh' 
     },
     { 
       name: 'YouTube', 
-      image: '/miniyoutube.svg', 
+      image: '/minitiktok.svg', 
       href: 'https://www.youtube.com/channel/UCyxANUH2srMZdE_kOWpWTyg' 
     },
     { 
       name: 'TikTok', 
-      image: '/minitiktok.svg', 
+      image: '/miniaple.svg', 
       href: 'https://www.tiktok.com/@brightersideofblue' 
     },
     { 
       name: 'Apple Podcast', 
-      image: '/miniapple.svg', 
+      image: '/minispotify.svg', 
       href: 'https://podcasts.apple.com/us/podcast/the-brighter-side-of-blue-podcast/id1715141379' 
     },
   ]
