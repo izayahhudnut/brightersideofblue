@@ -1,13 +1,33 @@
 import { NextResponse } from 'next/server';
 import axios from 'axios';
 
-const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY; // Add your YouTube API Key in .env.local
-const CHANNEL_ID = 'UCyxANUH2srMZdE_kOWpWTyg'; // Replace with the channel ID for "The Brighter Side of Blue Podcast"
+const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY; // Your YouTube API Key in .env.local
+const CHANNEL_ID = 'UCyxANUH2srMZdE_kOWpWTyg'; // Channel ID for "The Brighter Side of Blue Podcast"
+
+interface YouTubeVideoItem {
+  id: {
+    videoId: string;
+  };
+  snippet: {
+    title: string;
+    description: string;
+    publishedAt: string;
+    thumbnails: {
+      high: {
+        url: string;
+      };
+    };
+  };
+}
+
+interface YouTubeSearchResponse {
+  items: YouTubeVideoItem[];
+}
 
 export async function GET() {
   try {
-    const response = await axios.get(
-      `https://www.googleapis.com/youtube/v3/search`,
+    const response = await axios.get<YouTubeSearchResponse>(
+      'https://www.googleapis.com/youtube/v3/search',
       {
         params: {
           part: 'snippet',
@@ -20,7 +40,7 @@ export async function GET() {
       }
     );
 
-    const videos = response.data.items.map((item: any) => ({
+    const videos = response.data.items.map((item: YouTubeVideoItem) => ({
       id: item.id.videoId,
       title: item.snippet.title,
       description: item.snippet.description,

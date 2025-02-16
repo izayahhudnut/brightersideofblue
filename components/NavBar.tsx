@@ -35,11 +35,11 @@ export default function Navbar() {
     },
   ]
 
-  // Updated nav links with proper paths
-  const navLinks = [
+  // Updated nav links with explicit href for popup links
+  const navLinks: { href: string; text: string; isPopup?: boolean }[] = [
     { href: "/", text: "Home" },
     { href: pathname === '/partner' ? '/#about' : '#about', text: "About" },
-    { text: "Episodes", isPopup: true },
+    { href: '#', text: "Episodes", isPopup: true },
     { href: pathname === '/partner' ? '/#contact' : '#contact', text: "Contact" },
   ]
 
@@ -68,7 +68,7 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <Link 
               key={link.text}
-              href={link.href || '#'} 
+              href={link.href} 
               onClick={link.isPopup ? handleEpisodesClick : undefined}
               className="text-white text-lg hover:text-gray-300 hover:cursor-pointer transition-colors"
             >
@@ -121,7 +121,7 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <Link 
               key={link.text}
-              href={link.isPopup ? '#' : link.href} 
+              href={link.href} 
               onClick={link.isPopup ? handleEpisodesClick : () => setIsMenuOpen(false)}
               className="text-white text-lg hover:text-gray-300 hover:cursor-pointer transition-colors"
             >
