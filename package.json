@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^1.1.11",
+    "@prismicio/next": "^2.0.0",
     "@radix-ui/react-scroll-area": "^1.2.3",
+    "@slicemachine/adapter-next": "^0.3.66",
     "ai": "^4.1.41",
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.1",
