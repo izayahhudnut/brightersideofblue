@@ -50,7 +50,14 @@ export default function Hero() {
       </div>
 
       <div className="w-full mt-4 md:mt-0">
-        <Image src="/HeroImage.svg" alt="image" width={1200} height={600} />
+        <Image 
+          src="/HeroImage.svg" 
+          alt="image" 
+          width={1200} 
+          height={600} 
+          className="w-full h-auto"
+          priority
+        />
       </div>
 
       {showEpisodesPopup && (

@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const ContactForm = () => {
   return (
-    <div className="flex flex-col md:flex-row bg-[#1B1927] text-white p-6 md:p-10 rounded-lg">
+    <div className="flex flex-col md:flex-row bg-[#1B1927] text-white p-6 md:p-10 ">
       {/* Left Section: Image */}
       <div className="w-full md:w-1/2 flex items-center justify-center">
         <div className="relative w-full h-full min-h-[300px]">
