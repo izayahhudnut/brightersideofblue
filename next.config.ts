@@ -1,6 +1,8 @@
-// next.config.js
+import { NextConfig } from 'next';
+import path from 'path';
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
@@ -33,6 +35,10 @@ const nextConfig = {
         hostname: 'uploadthing-prod.s3.us-west-2.amazonaws.com',
       },
     ],
+  },
+  webpack(config: any) {  // Explicitly type the parameter here
+    config.resolve.alias['@'] = path.resolve(__dirname);  // Handle the @ alias
+    return config;
   },
 };
 
