@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import Button from "./ui/Button";
+import Button from "./ui/mainbutton";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],

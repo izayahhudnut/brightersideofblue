@@ -1,3 +1,6 @@
+// About.tsx
+import Image from "next/image";
+
 export default function About() {
   return (
     <section className="bg-[#1B1927] text-white py-10 md:py-20">
@@ -9,53 +12,28 @@ export default function About() {
 
         {/* Platform Icons */}
         <div className="grid grid-cols-2 md:flex md:flex-row md:justify-between gap-8 md:gap-0 w-full my-6 md:my-10">
-          <div className="flex justify-center">
-            <img
-              src="/Apple.svg"
-              width="200"
-              height="250"
-              alt="Apple platform"
-              className="opacity-60 w-20 md:w-[200px] h-auto transform hover:opacity-100 transition-opacity duration-300"
-            />
-          </div>
-          <div className="flex justify-center">
-            <img
-              src="/Spotify.svg"
-              width="150"
-              height="150"
-              alt="Spotify platform"
-              className="opacity-60 w-20 md:w-[150px] h-auto transform hover:opacity-100 transition-opacity duration-300"
-            />
-          </div>
-          <div className="flex justify-center">
-            <img
-              src="/Youtube.svg"
-              width="150"
-              height="150"
-              alt="Youtube platform"
-              className="opacity-60 w-20 md:w-[150px] h-auto transform hover:opacity-100 transition-opacity duration-300"
-            />
-          </div>
-          <div className="flex justify-center">
-            <img
-              src="/TikTok.svg"
-              width="150"
-              height="150"
-              alt="TikTok platform"
-              className="opacity-60 w-20 md:w-[150px] h-auto transform hover:opacity-100 transition-opacity duration-300"
-            />
-          </div>
+          {["Apple", "Spotify", "Youtube", "TikTok"].map((platform) => (
+            <div key={platform} className="flex justify-center">
+              <Image
+                src={`/${platform}.svg`}
+                width={200}
+                height={200}
+                alt={`${platform} platform`}
+                className="opacity-60 w-20 md:w-[150px] h-auto transform hover:opacity-100 transition-opacity duration-300"
+              />
+            </div>
+          ))}
         </div>
 
         {/* About Content Section */}
         <div className="flex flex-col md:flex-row mt-10 md:mt-20 gap-8 md:gap-12 md:justify-between">
           {/* Left Image Section */}
           <div className="w-full md:w-1/2">
-            <img
+            <Image
               src="/AboutImage.svg"
               alt="About us"
-              width="100"
-              height="100"
+              width={500}
+              height={500}
               className="w-full h-auto"
             />
           </div>
@@ -63,11 +41,11 @@ export default function About() {
           {/* Right Content Section */}
           <div className="w-full md:w-[45%]">
             <div className="flex flex-col h-full justify-center">
-              <img
+              <Image
                 src="/AboutText.svg"
                 alt="About text"
-                width="100"
-                height="100"
+                width={500}
+                height={200}
                 className="w-full h-auto mb-4"
               />
               <p className="mt-3 md:mt-5 opacity-60 text-sm md:text-base text-center md:text-left">
@@ -78,5 +56,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }

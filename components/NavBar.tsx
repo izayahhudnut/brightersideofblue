@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Image from "next/image"
 import Link from "next/link"
-import Button from "./ui/Button"
+import Button from "./ui/mainbutton"
 import { Menu, X } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
@@ -40,6 +40,7 @@ export default function Navbar() {
     { href: "/", text: "Home" },
     { href: pathname === '/partner' ? '/#about' : '#about', text: "About" },
     { href: '#', text: "Episodes", isPopup: true },
+    { href: "/blog", text: "Blogs" },
     { href: pathname === '/partner' ? '/#contact' : '#contact', text: "Contact" },
   ]
 
@@ -50,7 +51,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="relative">
+    <nav className="relative bg-[#222128]" >
       <div className="flex flex-row justify-between items-center mx-auto w-full px-4 md:w-[80%] py-5">
         {/* Logo linking to home */}
         <Link href="/">

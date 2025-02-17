@@ -5,6 +5,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'example.com', // allow example.com images
+      },
+      {
+        protocol: 'https',
         hostname: 'd3t3ozftmdmh3i.cloudfront.net',
       },
       {
@@ -13,8 +17,20 @@ const nextConfig = {
       },
       {
         protocol: 'http',
-        hostname: 'localhost', // Allow images from your local Strapi server
-        port: '1337', // Specify the port used by Strapi
+        hostname: 'localhost',
+        port: '1337',
+      },
+      {
+        protocol: 'https',
+        hostname: 'utfs.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'uploadthing.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'uploadthing-prod.s3.us-west-2.amazonaws.com',
       },
     ],
   },
