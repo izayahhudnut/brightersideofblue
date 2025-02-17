@@ -17,7 +17,7 @@ export function DeleteConfirmation({ isOpen, onClose, onConfirm, deleting = fals
           <DialogTitle>Confirm Delete</DialogTitle>
         </DialogHeader>
         <p>
-          Are you sure you want to delete <strong>{postTitle}</strong>? This action cannot be undone.
+          Are you sure you want to delete <strong>{postTitle}</strong>? This action can not be undone.
         </p>
         <div className="flex justify-end space-x-2">
           <Button variant="outline" onClick={onClose}>
