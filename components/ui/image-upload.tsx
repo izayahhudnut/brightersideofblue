@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import ReactCrop, { Crop, centerCrop, makeAspectCrop } from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 import { UploadButton } from "@uploadthing/react";
-import { Button } from "./button";
+import { Button } from "./button1";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./dialog";
 import type { OurFileRouter } from "@/app/api/uploadthing/core";
 import Image from "next/image";

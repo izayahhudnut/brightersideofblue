@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { LayoutDashboard, PenSquare } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button1";
 import { Toaster } from "@/components/ui/toaster";
 import Image from "next/image";
 import {
