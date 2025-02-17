@@ -9,11 +9,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export default function SponsorHero() {
   return (
-    <div className="w-full">
+    <div className="w-full bg-[#222128]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         {/* Title Section */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <h1 className={`${plusJakartaSans.className} text-black text-3xl sm:text-4xl lg:text-6xl font-bold`}>
+          <h1 className={`${plusJakartaSans.className} text-white text-3xl sm:text-4xl lg:text-6xl font-bold`}>
             Support & Sponsor The Podcast
           </h1>
         </div>
@@ -37,10 +37,10 @@ export default function SponsorHero() {
           {/* Text Content */}
           <div className="w-full lg:w-2/5 lg:self-center">
             <div className="space-y-4 sm:space-y-6">
-              <h2 className="text-black text-2xl sm:text-3xl lg:text-5xl font-bold">
+              <h2 className="text-white text-2xl sm:text-3xl lg:text-5xl font-bold">
                 About the <span className="text-blue-500">Podcast</span>
               </h2>
-              <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
                 The Brighter Side of Blue brings authentic, untold stories from law enforcement, 
                 giving listeners a real look at the work, humor, and camaraderie behind the badge. 
                 We deliver the real conversations that mainstream media doesn&apos;t cover—stories of dedication, 
